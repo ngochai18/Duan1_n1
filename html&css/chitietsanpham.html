@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+    <!-- css.gg -->
+    <link href="https://css.gg/css" rel="stylesheet" />
+    <!-- UNPKG -->
+    <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
+    <!-- JSDelivr -->
+    <link href="https://cdn.jsdelivr.net/npm/css.gg/icons/icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    .price{
+        text-decoration: line-through;
+    }
+</style>
+<body>
+    <div class="container">
+        <div id="new-navbar">
+            <div class="new-navbar-text">
+                <a href=""><p> Liên hệ: 0123456789 - 0346788943</p></a>
+            </div>
+            <div class="register">
+                <ul>
+                    <li><a href="">ĐĂNG NHẬP</a></li>
+                    <li><a href="">ĐĂNG KÝ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo"><img src="/img-sp/logo.jpg" alt="" class="m-auto"></div>
+        <header>
+            <div id="navbar">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="">Sản phẩm</a></li>
+                    <li><a href="">Tin tức</a></li>
+                    <li><a href="">Giới thiệu</a></li>
+                    <li><a href="">Liên hệ</a></li>
+                </ul>
+                <form action="">
+                    <input type="text" required>
+                    <button><i class="gg-search"></i></button>
+                </form>
+            </div>
+        </header>
+        <!-- content -->
+        <div class="main-content my-12 px-6">
+            <div class="content grid grid-cols-2 gap-4">
+                <div class="content-item-pro">
+                    <div class="item-pro-text ">
+                        <p></p>
+                    </div>
+                    <div class="item-pro-img">
+                        <img src="/img-sp/xiga2.jpg" alt="" class="w-[80%]">
+                    </div>
+                </div>
+                <div class="content-item-heading text-[#fff]">
+                    <h2 class="text-[32px] text-[#000] font-bold">CIGAR CAO FLAVOURS BELLA VANILLA TUBO</h2>
+                    <div class="flex my-2 ">
+                        <p class="text-[40px] pr-2 text-[red]">180,000đ</p>
+                        <p class="price text-[30px] mt-2  text-[red]">200,000</p>
+                    </div> 
+                    <span class="text-[22px] text-[#000]">Hotline hỗ trợ : 0818803825 - 0919803825</span>
+                   
+                    <div class="btn flex my-2">
+                        <div class="bg-[#ccc] py-4 px-10 mr-2 ">
+                            <button class="hover:opacity-50 font-bold text-[#000]">THÊM VÀO GIỎ</button>
+                        </div>
+                        <div class="bg-[#c51230] py-4 px-10">
+                            <button class="hover:opacity-50 font-bold">MUA NGAY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mô Tả -->
+            <div class="main-desc my-12">
+                <h1 class="text-[40px] text-[#000] font-bold">Mô Tả Sản Phẩm</h1>
+                <div class="my-6 bg-[#ccc] px-6">
+                    <div class="img">
+                        <img src="/img-sp/xiga2.jpg" alt="" class="w-[50%] mx-auto py-6">
+                    </div>
+                    <div class="desc mx-auto py-6 ">
+                        <h2 class="text-[26px] text-[#000] ">Tên Xì Gà: CIGAR CAO FLAVOURS BELLA VANILLA TUBO</h2>
+                        <p class="text-[#000] text-[26px] ">Giá: 180,000đ</p>
+                        <p class="text-[#000] text-[26px] ">Mã: 01</p>
+                        <p class="text-[#000] text-[24px] ">CAO Flavors Bella Vanilla Tubo là một trong những lựa chọn tuyệt vời cho những người yêu thích hương vị vani dịu nhẹ và muốn tận hưởng một trải nghiệm xì gà cao cấp. Với kích thước 4 3/4 ring 30, làn khói có một thiết kế đẹp mắt và tiện dụng với ống nhôm bảo vệ xì gà khỏi tổn thương và giúp giữ cho hương vị và độ tươi mới được bảo quản tốt.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- comment -->
+            <div class="comment">
+                <h1 class="text-[40px] text-[#000] font-bold">Bình Luận</h1>
+                <div class="py-2">
+                        <table class="w-full border-[1px] border-solid border-[#000] min-h-[200px] my-2">
+                            <tbody>
+                                <tr>
+                                    <td class="p-2"></td>
+                                    <td class="p-2"></td>
+                                    <td class="p-2"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    
+                    <form action="">
+                        <input type="text" name="" id="" class="w-[80%] py-2 border-[1px] border-solid border-[#000]" placeholder="Bình luận tại đây...">
+                        <input type="button" value="GỬI BÌNH LUẬN" class="w-[19%] py-2 bg-slate-500 hover:opacity-50">
+                    </form>
+                </div>
+            </div>
+            <div class="cungloai">
+                <h1 class="text-[40px] text-[#000] font-bold">Sản phẩm cùng loại</h1>
+                <div class="w-full border-[1px] border-solid border-[#000] min-h-[200px] my-2">
+                  <ul>
+                    <li class="p-4"><a href="">Cuba</a></li>
+                    <li class="p-4"><a href="">Ecuado</a></li>
+                  </ul>  
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyrights © 2023 by Nhóm 4</p>
+        </div>
+    </div>
+</body>
+</html>
