@@ -87,7 +87,7 @@
             
         </div>
 <div class="main">
-        <div class="card-main">
+        <div class="card-main ml-[230px]">
             <div class="card" data-aos="fade-right"  data-aos-duration="3000">
                 <a href="index1.php?act=danhmucsp&id_danhmuc=2">
                     <img src="https://theme.hstatic.net/200000136259/1000909655/14/home_col2_img4.jpg?v=218" alt="">

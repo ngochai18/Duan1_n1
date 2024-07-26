@@ -259,7 +259,9 @@
 <body>
     <div class="container">
         <div id="new-navbar">
-            <div class="new-navbar-text">
+        <img class="w-[70px]" src="view/img-sp/logo.jpg" alt="">
+            <div class="new-navbar-text ml-[-100px]">
+                
                 <a href="">
                     <p> Liên hệ: 1900 2080 1347 - 034 678 8943</p>
                 </a>
