@@ -412,6 +412,14 @@
                     </a>
                 </li>
                 <li>
+                    <a href="index.php?act=dsbl">
+                        <span class="icon">
+                            <ion-icon name=""></ion-icon>
+                        </span>
+                        <span class="title">Bình luận</span>
+                    </a>
+                </li>
+                <li>
                     <a href="../index1.php">
                         <span class="icon">
                             <ion-icon name=""></ion-icon>
