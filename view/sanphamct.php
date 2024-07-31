@@ -140,9 +140,16 @@
                     </form>
                 </div>
             </div> -->
-            <!-- <div class="my-12">
-                <iframe src="view/binhluan/binhluanform.php?id_product=<?=$id?>" frameborder="0" width="100%" height="300px"></iframe>
-            </div> -->
+            <div class="my-12">
+               
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+    $("#binhluan").load("view/binhluan/binhluanform.php", {id_product: <?=$id_product?>});
+  });
+</script>
+            </div>
             <div class="cungloai my-16">
                 
                 <h2 class="text-[40px] text-center mt-8 mb-4 text-[#000] font-bold">Sản phẩm tương tự</h2>

@@ -5,6 +5,7 @@ ob_start();
     include "../model/sanpham.php";
     include "../model/taikhoan.php";
     include "../model/thongke.php";
+    include "../model/binhluan.php";
     include "../model/cart.php";
     include "header.php";
     if(isset($_GET['act'])){
@@ -166,8 +167,21 @@ ob_start();
                 include "taikhoan/list.php";
                 break;
             
+            //binhluan
+            case 'xoabl':
+                // muốn xóa thì phải kiểm tra id
+                if(isset($_GET['ma_binh_luan'])&&($_GET['ma_binh_luan'])>0){
+                    delete_binhluan($_GET['ma_binh_luan']);
+                }
+
+                $listbinhluan=loadall_binhluan("",0);
+                include "binhluan/list.php";
+            break;
             case 'dsbl':
-                break;
+
+                $listbinhluan=loadall_binhluan(0);
+                include "binhluan/list.php";
+            break;
             case 'thongke' :
                 $listthongke = loadAll_thongke();
                 include "thongke/list.php";

@@ -3,7 +3,7 @@ session_start();
 include "../../model/pdo.php";
 include "../../model/binhluan.php";
 $id_product=$_REQUEST['id_product']; // $_REQUEST chứ tất cả các giá trị được gửi đến trang web
-$dsbl = load_binhluan($idpro);
+$dsbl = load_binhluan($id_product);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,10 +32,11 @@ $dsbl = load_binhluan($idpro);
                                 <?php
                                     foreach($dsbl as $bl){
                                         extract($bl);
+                                        $linkdm="index.php?act=sanpham&iddm=".$id;
                                         echo ' <tr>
-                                        <td class="p-2">'.$noidung.'</td>
+                                        <td class="p-2">'.$noi_dung.'</td>
                                         <td class="p-2">'.$id_user.'</td>
-                                        <td class="p-2">'.$ngaybinhluan.'</td>
+                                        <td class="p-2">'.$ngay_binh_luan.'</td>
                                     </tr>';
                                     }
                                 ?>
@@ -46,8 +47,9 @@ $dsbl = load_binhluan($idpro);
                         if(isset($_SESSION['user'])){
                         
                     ?>
-                    <form action="">
-                        <input type="text" name="" id="" class="w-[80%] py-2 border-[1px] border-solid border-[#000]" placeholder="Bình luận tại đây...">
+                    <form  action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+                    <input type="hidden" name="id_product" value="<?=$id_product?>">
+                        <input type="text"  id="" class="w-[80%] py-2 border-[1px] border-solid border-[#000]" placeholder="Bình luận tại đây...">
                         <input type="submit" value="GỬI BÌNH LUẬN" class="w-[19%] py-2 bg-slate-500 hover:bg-[green]">
                     </form>
                     <?php
@@ -59,17 +61,18 @@ $dsbl = load_binhluan($idpro);
                      <?php
                     // add binh luan
                     if(isset($_POST['guibinhluan']) && ($_POST['guibinhluan'])){
-                        $noidung = $_POST['noidung'];
-                        $id_user = $_SESSION['user']['id_tk'];
-                        $ngaybinhluan = date('Y-m-d');
-                        insert_binhluan($noidung,$iduser,$idpro,$ngaybinhluan);
+                        $noi_dung = $_POST['noi_dung'];
+                        $id_product=$_POST['id_product'];
+                        $id_user = $_SESSION['id_user']['ma_binh_luan'];
+                        $ngay_binh_luan = date('Y-m-d');
+                        insert_binhluan($noi_dung,$id_user,$id_product,$ngay_binh_luan);
                         header("location: ".$_SERVER['HTTP_REFERER']); // HTTP_REFERER : trở về trang hiện tại
                     }
                     ?>
                 </div>
             </div>
     <div class="footer">
-            <p>Copyrights © 2023 by Nhóm 4</p>
+            <p>Copyrights © 2024 by Nhóm 1</p>
         </div>
     </div>
     <script src="view/js/sticky.js"></script>
