@@ -96,7 +96,9 @@ if ($endProduct >= $rowcount) {
                                         }
                                         
                                         ?>"
-                                        <?php if ($bill['trangthai'] == 3) echo "disabled"; ?> > <!-- Thêm điều kiện disabled nếu trạng thái là "Đã giao hàng" -->
+                                        <?php if ($bill['trangthai'] == 3) echo "disabled"; ?>
+                                        <?php if ($bill['trangthai'] == 2) echo "disabled"; ?>
+                                         > <!-- Thêm điều kiện disabled nếu trạng thái là "Đã giao hàng" và "Đang giao hàng" sẽ không nhấn huỷ được -->
                                          
                                             <option value="0">Đơn hàng mới</option>
                                             <option value="1" <?php if ($bill['trangthai'] == 1) echo "selected"?>>Đang xử lí</option>
